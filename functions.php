@@ -9,18 +9,24 @@
 
 use Novuso\WordPress\Theme\NovusoPress\Framework;
 
+$baseDir = get_template_directory();
+$childDir = get_stylesheet_directory();
+
 // Composer install is required at the project or theme level
 if (!class_exists('Novuso\\WordPress\\Theme\\NovusoPress\\Framework')) {
-    if (!file_exists(__DIR__.'/vendor/autoload.php')) {
+    if (file_exists($baseDir.'/vendor/autoload.php')) {
+        require $baseDir.'/vendor/autoload.php';
+    } elseif (file_exists($childDir.'/vendor/autoload.php')) {
+        require $childDir.'/vendor/autoload.php';
+    } else {
         throw new RuntimeException('Composer install required');
     }
-    require __DIR__.'/vendor/autoload.php';
 }
 
 // include helper functions
-require __DIR__.'/core/comments.php';
-require __DIR__.'/core/searchform.php';
-require __DIR__.'/core/formatting.php';
+require $baseDir.'/core/comments.php';
+require $baseDir.'/core/searchform.php';
+require $baseDir.'/core/formatting.php';
 
 Framework::instance()->init();
 
