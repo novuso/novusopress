@@ -1,0 +1,26 @@
+
+/* Footer
+   ========================================================================== */
+
+#footer-container {
+    padding-bottom: 20px;
+}
+
+.active-footers-four {
+
+    @media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+        .footer-area-three {
+            clear: left;
+        }
+    }
+}
+
+#copyright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    .well {
+        margin-bottom: 0px;
+    }
+}

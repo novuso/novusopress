@@ -1,0 +1,29 @@
+                <article id="node-{{ wp.get_the_ID|raw }}" {{ view.postClass|raw }}>
+                    <header class="post-header">
+                        <h2><a href="{{ wp.get_the_permalink|raw }}" title="{{ wp.the_title_attribute({'echo':false})|raw }}" rel="bookmark">{{ wp.get_the_title|raw }}</a></h2>
+                    </header><!-- .post-header -->
+                    {{ view.postTimeMeta|raw }}
+                {%- if view.hasFeaturedImage %}
+
+                    <div class="featured-image thumbnail">
+                        {{ view.featuredImage|raw }}
+                    </div><!-- .featured-image -->
+                {%- endif %}
+
+                    <div class="post-content entry-content pad-vertical clearfix">
+                        {{ view.postContent("excerpt")|raw }}
+                    </div><!-- .post-content -->
+                    <footer class="post-meta entry-meta">
+                    {%- if wp.current_theme_supports("post-formats", wp.get_post_format) %}
+
+                        {{ view.postFormatMeta|raw }}
+                    {%- endif %}
+                    {%- if view.hasCommentsLink %}
+
+                        {{ view.commentsPopupLink|raw }}
+                    {%- endif %}
+
+                        {{ view.postClassificationMeta|raw }}
+                    </footer><!-- .post-meta -->
+                </article><!-- #node-{{ wp.get_the_ID|raw }} -->
+                <hr>

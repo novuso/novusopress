@@ -1,0 +1,20 @@
+            <main id="main-content" {{ view.contentClass|raw }} role="main">
+            {%- if view.blogTitle %}
+
+                <div class="page-header">
+                    <h2>{{ view.blogTitle|raw }}</h2>
+                </div>
+            {%- endif %}
+            {%- for post in posts %}
+
+{% include "post/post-index.html.twig" %}
+            {%- else %}
+
+{% include "post/post-not-found.html.twig" %}
+            {%- endfor %}
+            {%- if view.pagination %}
+
+                {{ view.pagination|raw }}
+            {%- endif %}
+
+            </main><!-- #main-content -->

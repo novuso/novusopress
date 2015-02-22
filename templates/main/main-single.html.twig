@@ -1,0 +1,15 @@
+            <main id="main-content" {{ view.contentClass|raw }} role="main">
+            {%- for post in posts %}
+
+{% include "post/post-single.html.twig" %}
+            {%- endfor %}
+            {%- if view.pagination %}
+
+                {{ view.pagination|raw }}
+            {%- endif %}
+            {%- if wp.comments_open or wp.get_comments_number %}
+
+                {{ view.comments|raw }}
+            {%- endif %}
+
+            </main><!-- #main-content -->

@@ -1,0 +1,32 @@
+{% if view.headerWidgetsActive %}
+<div id="header-widgets-section" class="header-widgets-section">
+    <div id="header-widgets-container" class="header-widgets-container container">
+        <div id="header-widgets-row" class="header-widgets-row row">
+            <div id="header-widgets-area" class="header-widgets-area col-sm-12">
+                <div id="header-widgets" class="header-widgets">
+                    {{ view.headerWidgets|raw }}
+                </div><!-- #header-widgets -->
+            </div><!-- #header-widgets-area -->
+        </div><!-- #header-widgets-row -->
+    </div><!-- #header-widgets-container -->
+</div><!-- #header-widgets-section -->
+{% endif %}
+<header id="header" class="header" role="banner">
+    <div id="header-container" class="header-container container">
+        <div id="header-row" class="header-row row">
+            <div id="masthead" class="masthead col-sm-12">
+                {%- if view.logoExists %}
+
+                <div id="site-logo" class="site-logo pull-left">
+                    {{ view.logo|raw }}
+                </div><!-- #site-logo -->
+                {%- endif %}
+
+                <div id="site-headings" class="site-headings">
+                    {{ view.siteNameHeading|raw }}
+                    {{ view.siteDescriptionHeading|raw }}
+                </div><!-- #site-headings -->
+            </div><!-- #masthead -->
+        </div><!-- #header-row -->
+    </div><!-- #header-container -->
+</header><!-- #header -->

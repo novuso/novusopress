@@ -1,0 +1,63 @@
+
+/* WordPress Calendar Widget
+   ========================================================================== */
+
+.widget_calendar {
+    width: 100%;
+}
+
+#wp-calendar {
+    width: 100%;
+
+    caption {
+        text-align: right;
+        color: $text-color;
+        font-size: 12px;
+    }
+
+    thead {
+        font-size: 10px;
+    }
+
+    thead th {
+        padding-bottom: 10px;
+        text-align: center;
+    }
+
+    tbody {
+        color: $gray;
+
+        td {
+            padding: 4px;
+            background: $gray-lighter;
+            border: 1px solid #ffffff;
+            text-align: center;
+            cursor: default;
+
+            &:hover {
+                background: #ffffff;
+            }
+        }
+
+        .pad {
+            background: none;
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+
+    tfoot #next {
+        padding-top: 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+        text-align: right;
+    }
+
+    tfoot #prev {
+        padding-top: 10px;
+        font-size: 10px;
+        text-transform: uppercase;
+    }
+}

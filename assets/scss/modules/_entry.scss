@@ -1,0 +1,33 @@
+
+/* Page header
+   ========================================================================== */
+
+.page-header {
+    margin-top: 20px;
+}
+
+/* Thumbnail
+   ========================================================================== */
+
+.featured-image {
+    display: inline-block;
+    max-width: 100%;
+}
+
+/* Meta
+   ========================================================================== */
+
+.meta-item {
+    .label {
+        display: inline-block;
+        margin-top: 2px;
+        margin-bottom: 2px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+.meta-date {
+    margin-bottom: 10px;
+    font-weight: 600;
+}

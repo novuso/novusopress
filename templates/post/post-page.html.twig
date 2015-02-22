@@ -1,0 +1,15 @@
+                <section id="node-{{ wp.get_the_ID|raw }}" {{ view.postClass|raw }}>
+                    <header id="page-header" class="page-header">
+                        <h2>{{ wp.get_the_title|raw }}</h2>
+                    </header><!-- #page-header -->
+                {%- if view.hasFeaturedImage %}
+
+                    <div id="featured-image" class="featured-image thumbnail">
+                        {{ view.featuredImage|raw }}
+                    </div><!-- #featured-image -->
+                {%- endif %}
+
+                    <div id="page-content" class="page-content entry-content clearfix">
+                        {{ view.postContent|raw }}
+                    </div><!-- #page-content -->
+                </section><!-- #node-{{ wp.get_the_ID|raw }} -->

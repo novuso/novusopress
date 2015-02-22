@@ -1,0 +1,12 @@
+{
+    "scripts": {
+        "site": ["modernizr", "respond", "jquery", "bootstrap"],
+        "admin": [],
+        "login": []
+    },
+    "styles": {
+        "site": ["font-awesome"],
+        "admin": [],
+        "login": []
+    }
+}

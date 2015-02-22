@@ -1,0 +1,16 @@
+                <div id="node-{{ wp.get_the_ID|raw }}" {{ view.postClass|raw }}>
+                    <header id="attachment-header" class="attachment-header page-header">
+                        <h2>{{ wp.get_the_title|raw }}</h2>
+                    </header><!-- #attachment-header -->
+                    <div id="attachment-content" class="attachment-content entry-content clearfix">
+                        {{ view.attachmentContent|raw }}
+                    </div><!-- #attachment-content -->
+                    <footer id="attachment-meta" class="attachment-meta entry-meta">
+                        {{ view.postTimeMeta|raw }}
+                    {%- if wp.wp_attachment_is_image %}
+
+                        {{ view.imageAttachmentLink|raw }}
+                    {%- endif %}
+
+                    </footer><!-- #attachment-meta -->
+                </div><!-- #node-{{ wp.get_the_ID|raw }} -->

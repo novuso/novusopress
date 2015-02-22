@@ -1,0 +1,80 @@
+{% block doctype %}
+<!DOCTYPE html>
+{% endblock %}
+{% block openHtml %}
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" {{ view.langAttr|raw }}> <![endif]-->
+<!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8" {{ view.langAttr|raw }}> <![endif]-->
+<!--[if IE 8]> <html class="no-js lt-ie9" {{ view.langAttr|raw }}> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" {{ view.langAttr|raw }}> <!--<![endif]-->
+{% endblock %}
+{% block openHead %}
+<head>
+{% endblock %}
+{% block charset %}
+<meta charset="{{ view.charset }}">
+{% endblock %}
+{% block compat %}
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+{% endblock %}
+{% block wpHead %}
+{{ view.wpHead|raw -}}
+{% endblock %}
+{% block closeHead %}
+</head>
+{% endblock %}
+{% block openBody %}
+<body {{ view.bodyClass|raw }}>
+{% endblock %}
+{% block body %}
+{% block openWrapper %}
+<div id="wrapper" {{ view.wrapperClass|raw }}>
+{% endblock %}
+{% if view.mainMenuActive and view.staticNav %}
+{% include "navigation/navigation-static.html.twig" %}
+{% endif %}
+{% if view.mainMenuActive and view.fixedNav %}
+{% include "navigation/navigation-fixed.html.twig" %}
+{% endif %}
+{% block header %}
+{% include "header/header.html.twig" %}
+{% endblock %}
+{% if view.mainMenuActive and view.belowNav %}
+{% include "navigation/navigation.html.twig" %}
+{% endif %}
+{% block breadcrumbs %}
+{% if view.displayBreadcrumbs %}
+<div id="breadcrumbs" class="breadcrumbs">
+    {{ view.breadcrumbs|raw }}
+</div><!-- #breadcrumbs -->
+{% endif %}
+{% endblock %}
+{% block content %}
+<div id="content" class="content">
+    <div id="content-container" class="content-container container">
+        <div id="content-row" class="content-row row">
+{% block main %}
+{% endblock %}
+{% block sidebar %}
+{% if view.sidebarActive %}
+{% include "sidebar/sidebar.html.twig" %}
+{% endif %}
+{% endblock %}
+        </div><!-- #content-row -->
+    </div><!-- #content-container -->
+</div><!-- #content -->
+{% endblock %}
+{% block footer %}
+{% include "footer/footer.html.twig" %}
+{% endblock %}
+{% block closeWrapper %}
+</div><!-- #wrapper -->
+{% endblock %}
+{% endblock %}
+{% block wpFooter %}
+{{ view.wpFooter|raw -}}
+{% endblock %}
+{% block closeBody %}
+</body>
+{% endblock %}
+{% block closeHtml %}
+</html>{% endblock %}

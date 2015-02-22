@@ -1,0 +1,118 @@
+
+/* Comments
+   ========================================================================== */
+
+ol.comment-list {
+
+    li {}
+
+    li.alt {}
+
+    li.bypostauthor {}
+
+    li.byuser {}
+
+    li.even {}
+
+    li.odd {}
+
+    li.thread-alt {}
+
+    li.thread-even {}
+
+    li.thread-odd {}
+
+    li.comment {
+        border-top: 1px solid #ddd;
+        border-left: 1px solid #ddd;
+        border-radius: $border-radius-base;
+        padding: 10px 0 10px 10px;
+
+        div.comment-body {}
+
+        footer.comment-meta {
+
+            a {}
+        }
+
+        div.comment-author {}
+
+        div.vcard {
+
+            span.fn {
+
+                a.url {}
+
+                img.photo {}
+
+                img.avatar {}
+
+                img.avatar-64 {}
+
+                img.avatar-38 {}
+            }
+
+            a.comment-datetime {
+
+                time {}
+            }
+
+            span.edit-link {
+
+                a {
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        div.comment-content {}
+
+        div.reply {
+
+            a.comment-reply-link {}
+
+            span {}
+        }
+
+        ul.children {
+            margin: 1em 0 0;
+            text-indent: 0;
+
+            li {}
+
+            li.alt {}
+
+            li.bypostauthor {}
+
+            li.byuser {}
+
+            li.even {}
+
+            li.odd {}
+
+            li.thread-alt {}
+
+            li.thread-even {}
+
+            li.thread-odd {}
+
+            li.comment {}
+
+            li.depth-2 {
+                margin: 0 0 10px 10px;
+            }
+
+            li.depth-3 {
+                margin: 0 0 10px 10px;
+            }
+
+            li.depth-4 {
+                margin: 0 0 10px 10px;
+            }
+
+            li.depth-5 {
+                margin: 0 0 10px 10px;
+            }
+        }
+    }
+}

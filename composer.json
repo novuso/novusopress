@@ -1,0 +1,24 @@
+{
+    "name": "novuso/novusopress",
+    "description": "A parent theme for WordPress site development",
+    "type": "wordpress-theme",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.4.0",
+        "composer/installers": "~1.0",
+        "novuso/novuso-wp-common": "~0.2",
+        "twig/twig": "~1.16"
+    },
+    "extra": {
+        "installer-paths": {
+            "../../plugins/{$name}/": ["type:wordpress-plugin"],
+            "../{$name}/": ["type:wordpress-theme"],
+            "../../mu-plugins/{$name}/": ["type:wordpress-muplugin"]
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Novuso\\WordPress\\Theme\\NovusoPress\\": "core"
+        }
+    }
+}

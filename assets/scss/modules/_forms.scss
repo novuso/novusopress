@@ -1,0 +1,12 @@
+
+/* Forms
+   ========================================================================== */
+
+label.required:after {
+    content: "*";
+    color: $brand-danger;
+}
+
+span.required {
+    color: $brand-danger;
+}

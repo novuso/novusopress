@@ -1,0 +1,8 @@
+/assets/.sass-cache/
+/vendor/
+/composer.phar
+/composer.lock
+/nbproject/
+/.idea/
+/*.sublime-project
+/*.sublime-workspace

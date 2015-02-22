@@ -1,0 +1,40 @@
+<footer id="footer" class="footer" role="contentinfo">
+    {%- if view.footerActive %}
+
+    <div id="footer-container" class="footer-container container">
+        <div id="footer-row" class="footer-row row">
+            {%- if view.footerOneActive %}
+
+            <div id="footer-area-one" {{ view.footerClass("footer-area-one")|raw }}>
+                {{ view.footerOne|raw }}
+            </div><!-- #footer-area-one -->
+            {%- endif %}
+            {%- if view.footerTwoActive %}
+
+            <div id="footer-area-two" {{ view.footerClass("footer-area-two")|raw }}>
+                {{ view.footerTwo|raw }}
+            </div><!-- #footer-area-two -->
+            {%- endif %}
+            {%- if view.footerThreeActive %}
+
+            <div id="footer-area-three" {{ view.footerClass("footer-area-three")|raw }}>
+                {{ view.footerThree|raw }}
+            </div><!-- #footer-area-three -->
+            {%- endif %}
+            {%- if view.footerFourActive %}
+
+            <div id="footer-area-four" {{ view.footerClass("footer-area-four")|raw }}>
+                {{ view.footerFour|raw }}
+            </div><!-- #footer-area-four -->
+            {%- endif %}
+
+        </div><!-- #footer-row -->
+    </div><!-- #footer-container -->
+    {%- endif %}
+
+    <div id="copyright" class="copyright container">
+        <div class="well well-sm text-center">
+            &copy; {{ "now"|date("Y") }} {{ view.siteName }}. {{ view.rightsReserved }}.
+        </div>
+    </div><!-- #copyright -->
+</footer><!-- #footer -->
